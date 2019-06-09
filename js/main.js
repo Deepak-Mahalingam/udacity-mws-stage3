@@ -196,6 +196,8 @@ createRestaurantHTML = (restaurant) => {
   const fav = document.createElement('span');
   fav.id=restaurant.id;
   fav.className="fav"
+  fav.setAttribute("aria-label","favorite");
+  fav.setAttribute("role","add to favorite");
   
   if(restaurant.is_favorite=='true'){
     restaurant.is_favorite=true;
